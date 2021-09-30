@@ -85,9 +85,9 @@ export class LAppModel extends CubismUserModel {
    * @param fileName
    */
   public loadAssets(dir: string, fileName: string): void {
-    console.log('资源路径',dir)
+    console.log('loadAssets', dir, fileName)
     this._modelHomeDir = dir;
-    fetch(`${this._modelHomeDir}${fileName}`)
+    fetch(`${this._modelHomeDir}/${fileName}`)
       .then(response => response.arrayBuffer())
       .then(arrayBuffer => {
         const setting: ICubismModelSetting = new CubismModelSettingJson(
@@ -344,7 +344,7 @@ export class LAppModel extends CubismUserModel {
 
     // Motion
     const loadCubismMotion = (): void => {
-      document.getElementById('live2d-hidden').style.display='block'
+      document.getElementById('live2d-hidden').style.display = 'block'
       this._state = LoadStep.WaitLoadMotion;
       this._model.saveParameters();
       this._allMotionCount = 0;
@@ -772,8 +772,8 @@ export class LAppModel extends CubismUserModel {
             this._state = LoadStep.LoadTexture;
 
             // 全てのモーションを停止する
-            document.getElementById('live2d-hidden').style.display='none'
-            if(this._motionManager){
+            document.getElementById('live2d-hidden').style.display = 'none'
+            if (this._motionManager) {
               this._motionManager.stopAllMotions();
               this.createRenderer();
               this.setupTextures();
@@ -786,7 +786,7 @@ export class LAppModel extends CubismUserModel {
             // this.createRenderer();
             // this.setupTextures();
             // this.getRenderer().startUp(gl);
-            document.getElementById('live2d').style.visibility='visible'
+            document.getElementById('live2d').style.visibility = 'visible'
           }
         });
     }

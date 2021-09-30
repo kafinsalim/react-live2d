@@ -33,45 +33,21 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function ReactLive2d(props) {
-  // 好看颜色列表
-  // green: '#B4DEAE',
-  // DeepBlue: '#5B8DBE',
-  // LightBlue: '#C8E6FE',
-  // pink: '#F9B8BE'
-  // 容器样式
   var containerStyle = {
     position: 'fixed',
     top: props.top ? props.top : '',
     right: props.right ? props.right : '0',
     bottom: props.bottom ? props.bottom : '0',
     left: props.left ? props.left : ''
-  }; // canvas样式
-
+  };
   var canvasStyle = {
     position: 'relative',
     top: props.top ? props.top : '',
     right: props.right ? props.right : '0',
     bottom: props.bottom ? props.bottom : '0',
     left: props.left ? props.left : ''
-  }; // 对话框样式
-
-  var printStyle = _defineProperty({
-    position: 'absolute',
-    width: props.width > 300 ? props.width / 2 : '150px',
-    left: props.width > 300 ? (props.width - props.width / 2) / 2 + 'px' : (props.width - 150) / 2 + 'px',
-    top: '0',
-    minHeight: '20px',
-    display: 'block',
-    borderRadius: '5px',
-    border: '1px dashed #ccc',
-    padding: '5px',
-    background: props.color ? props.color : '#C8E6FE'
-  }, "display", 'none'); // 面板主题样式
-
-
+  };
   var Theme = {
     color: props.color ? props.color : '#C8E6FE',
     width: '30px',
@@ -175,9 +151,6 @@ function ReactLive2d(props) {
       left: '0',
       zIndex: '2'
     }
-  }), /*#__PURE__*/_react["default"].createElement("div", {
-    id: "live2d-print",
-    style: printStyle
   }), /*#__PURE__*/_react["default"].createElement("canvas", {
     id: "live2d",
     style: canvasStyle,
@@ -203,7 +176,7 @@ function ReactLive2d(props) {
       return talkPrint('你想要换一个看板娘吗？');
     },
     onMouseLeave: cancelPrint
-  }, "\uE7CA"))));
+  }, "\uE7CA ", /*#__PURE__*/_react["default"].createElement("h1", null, "asep so sayang")))));
 }
 
 var _default = ReactLive2d;

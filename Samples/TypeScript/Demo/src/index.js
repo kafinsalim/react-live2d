@@ -6,13 +6,6 @@ import './asset/index.css'
 
 function ReactLive2d(props) {
 
-    // 好看颜色列表
-    // green: '#B4DEAE',
-    // DeepBlue: '#5B8DBE',
-    // LightBlue: '#C8E6FE',
-    // pink: '#F9B8BE'
-
-    // 容器样式
     let containerStyle = {
         position: 'fixed',
         top: props.top ? props.top : '',
@@ -20,7 +13,7 @@ function ReactLive2d(props) {
         bottom: props.bottom ? props.bottom : '0',
         left: props.left ? props.left : ''
     }
-    // canvas样式
+
     let canvasStyle = {
         position: 'relative',
         top: props.top ? props.top : '',
@@ -28,22 +21,8 @@ function ReactLive2d(props) {
         bottom: props.bottom ? props.bottom : '0',
         left: props.left ? props.left : ''
     }
-    // 对话框样式
-    let printStyle = {
-        position: 'absolute',
-        width: props.width > 300 ? props.width / 2 : '150px',
-        left: props.width > 300 ? (props.width - props.width / 2) / 2 + 'px' : (props.width - 150) / 2 + 'px',
-        top: '0',
-        minHeight: '20px',
-        display: 'block',
-        borderRadius: '5px',
-        border: '1px dashed #ccc',
-        padding: '5px',
-        background: props.color ? props.color : '#C8E6FE',
-        display: 'none',
-    }
 
-    // 面板主题样式
+
     let Theme = {
         color: props.color ? props.color : '#C8E6FE',
         width: '30px',
@@ -150,9 +129,6 @@ function ReactLive2d(props) {
                 >
 
                 </div>
-                <div id="live2d-print"
-                    style={printStyle}
-                ></div>
                 <canvas
                     id="live2d"
                     style={canvasStyle}
@@ -182,7 +158,7 @@ function ReactLive2d(props) {
                                 onClick={ctTab}
                                 onMouseEnter={()=>talkPrint('你想要换一个看板娘吗？')}
                                 onMouseLeave={cancelPrint}
-                            >&#xe7ca;</div>
+                            >&#xe7ca; <h1>asep so sayang</h1></div>
                         }
                     </div>
                 }
