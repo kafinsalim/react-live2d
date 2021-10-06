@@ -47,7 +47,6 @@ function ReactLive2d(props) {
     id: "live2d-container"
   }, /*#__PURE__*/_react["default"].createElement("canvas", {
     id: "live2d",
-    style: canvasStyle,
     width: props.width ? props.width : "300",
     height: props.height ? props.height : "500",
     className: "live2d"
