@@ -43,7 +43,7 @@ function ReactLive2d(props) {
     }
   }, [props.release]);
   return /*#__PURE__*/_react["default"].createElement("div", {
-    className: className,
+    className: props.className,
     id: "live2d-container"
   }, /*#__PURE__*/_react["default"].createElement("canvas", {
     id: "live2d",
