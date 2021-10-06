@@ -43,12 +43,14 @@ function ReactLive2d(props) {
     }
   }, [props.release]);
   return /*#__PURE__*/_react["default"].createElement("div", {
-    className: props.className
+    className: className,
+    id: "live2d-container"
   }, /*#__PURE__*/_react["default"].createElement("canvas", {
-    id: "canvas-live2d",
-    className: props.className,
+    id: "live2d",
+    style: canvasStyle,
     width: props.width ? props.width : "300",
-    height: props.height ? props.height : "500"
+    height: props.height ? props.height : "500",
+    className: "live2d"
   }));
 }
 

@@ -147,13 +147,14 @@ export class LAppLive2DManager {
   // 页面属性变化
   public talkPrint(print:string): void {
     clearTimeout(timer);
-    let printNow = document.getElementById('live2d-print');
-    printNow.innerHTML = print;
-    printNow.style.display = 'block';
-    timer = setTimeout(() => {
-      printNow.innerHTML = '';
-      printNow.style.display = 'none';
-    }, 2000);
+    console.log(`talkPrint`)
+    // let printNow = document.getElementById('live2d-print');
+    // printNow.innerHTML = print;
+    // printNow.style.display = 'block';
+    // timer = setTimeout(() => {
+    //   printNow.innerHTML = '';
+    //   printNow.style.display = 'none';
+    // }, 2000);
   }
 
   /**

@@ -344,7 +344,7 @@ export class LAppModel extends CubismUserModel {
 
     // Motion
     const loadCubismMotion = (): void => {
-      document.getElementById('live2d-hidden').style.display='block'
+      // document.getElementById('live2d-hidden').style.display='block'
       this._state = LoadStep.WaitLoadMotion;
       this._model.saveParameters();
       this._allMotionCount = 0;
@@ -772,7 +772,7 @@ export class LAppModel extends CubismUserModel {
             this._state = LoadStep.LoadTexture;
 
             // 全てのモーションを停止する
-            document.getElementById('live2d-hidden').style.display='none'
+            // document.getElementById('live2d-hidden').style.display='none'
             if(this._motionManager){
               this._motionManager.stopAllMotions();
               this.createRenderer();
